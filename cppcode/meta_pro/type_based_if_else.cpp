@@ -5,44 +5,45 @@ using namespace std;
 struct A
 {
     int val1;
+    int val2;
 };
 struct B
 {
-    int val;
+    int val1;
+    int val2;
 };
 
 struct C
 {
-    int val;
+    int val1;
+    int val2;
 };
 // class template:
 class MessageHandler
 {
-    typedef std::pair<int,int> key_t;
-    std::map<key_t, A> mapA;
-    std::map<key_t, B> mapB;
-    std::map<key_t, C> mapC;
 
 public:
-    template <class T>
-    void process (T& arg) 
+    template <typename ...Args>
+    void process ( Args&& ...args) 
     {
-        if (std::is_same<T, A>::value)   // <== Decision based on type A
-        {
-            std::cout << "handle for type A" << endl;
-            key_t key;
-            key.first = arg.val;
-        }
-
-        if (std::is_same<T, B>::value)  // <== Decision based on type B
-        {
-            std::cout << "handle for type B" << endl;
-        }
-
-        if (std::is_same<T, C>::value)  // <== Decision based on type C
-        {
-            std::cout << "handle for type C" << endl;
-        }
+        doProcess(std::forward<Args&&>(args)...);
+    }
+    void doProcess ( const A& arg) 
+    {
+        std::cout << "Type A" << std::endl;
+    }
+    /*
+    void doProcess ( const A& arg,int) 
+    {
+        std::cout << "Type A int" << std::endl;
+    }*/
+    void doProcess ( const B& arg) 
+    {
+        std::cout << "Type B" << std::endl;
+    }
+    void doProcess (...) 
+    {
+        std::cout << "any other" << std::endl;
     }
 };
 
@@ -50,8 +51,9 @@ int main()
 {
     MessageHandler handler;
     A aObj;
+    handler.doProcess(aObj,int());
     B bObj;
-    handler.process(aObj);
-    handler.process(bObj);
+    handler.doProcess(bObj);
+    handler.doProcess(int());
 
 }

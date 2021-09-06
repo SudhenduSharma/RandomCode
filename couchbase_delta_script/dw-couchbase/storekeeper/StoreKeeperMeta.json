@@ -1,0 +1,15 @@
+{
+	"StoreKeeperMeta": {
+		"createdOn": "2013-04-27 12:38:18",
+		"lastModifiedOn": "2013-04-27 12:38:18",
+		"deltas": [
+
+			{
+				"deltaFileName": "create.1.cbq",
+				"version": "1",
+				"applyDate": "2013-04-27 12:38:18"
+
+			}
+		]
+	}
+}
