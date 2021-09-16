@@ -1018,6 +1018,7 @@ _deps
 
 # Executables
 *.exe
+*a.out
 *.out
 *.app
 *.i*86

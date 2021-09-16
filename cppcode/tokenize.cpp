@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
  
-void tokenize(std::string const &str, const char delim,
+void tokenize(std::string const &str, std::string delim,
             std::vector<std::string> &out)
 {
     size_t start;
@@ -18,7 +18,7 @@ void tokenize(std::string const &str, const char delim,
 int main()
 {
     std::string s = "C*C++*Java";
-    const char delim = '*';
+    std::string delim = "*";
  
     std::vector<std::string> out;
     tokenize(s, delim, out);

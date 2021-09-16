@@ -1,0 +1,38 @@
+https://leetcode.com/problems/increasing-decreasing-string/
+https://leetcode.com/discuss/interview-question/1098635/Akuna-Capital-or-OA-or-2021-C%2B%2B-Campus-Coding-Only
+
+ The onsite interview was 1:1 with two interviewers. The first was the technical interview, he asked:
+1. Implement power of 10 template without runtime overhead.
+2. How to check if a class has a member function. (Failed to answer)
+https://stackoverflow.com/questions/257288/templated-check-for-the-existence-of-a-class-member-function
+3. Write the syntax to specialise the template function of a template class. (Failed to answer)
+4. Explain the implementation of virtual function.
+https://www.learncpp.com/cpp-tutorial/the-virtual-table/
+
+5. Giving the root of a binary tree and a value, find the two nodes of the tree, which the sum of them equals to the value. (I wrote the codes which the complexity is O(nlogn) ).
+6. Explain how mmap works. (I thought OS mapped the region in heap, instead, it mapped between heap and stack.)
+https://stackoverflow.com/questions/45972/mmap-vs-reading-blocks
+https://www.kdab.com/making-the-most-of-your-memory-with-mmap/
+
+7. How to compute the size of L1/L2 cache of CPU without read /proc/cpuinfo. (Failed to answer)
+https://www.extremetech.com/extreme/188776-how-l1-and-l2-cpu-caches-work-and-why-theyre-an-essential-part-of-modern-chips
+https://medium.com/software-design/why-software-developers-should-care-about-cpu-caches-8da04355bb8a
+http://igoro.com/archive/gallery-of-processor-cache-effects/
+
+The second interviewer asked me why choose the company, a little bit about last project, etc.
+
+After the onsite interview, I was rejected. Fair enough, I failed to answer some questions.
+
+
+Mutex and Atomic
+
+Interview Questions
+Describe the difference between mutex and atomic.
+Answer Question
+Describe a smart pointer. What is the size of a smart pointer.
+
+Write a program to interpret exchange messages.
+
+Q: Check if a number is a power of 2.
+Q: Write code for pair-sum(a version of subset sum where the sum of two number is equal to the expected sum, rather than optimization problem, it is decision problem) problem. How to solve it in O(n lg n) and O(n) time.
+Q: What is the difference of pointer and reference in C++. When to use those ?

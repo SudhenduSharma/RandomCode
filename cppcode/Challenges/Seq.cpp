@@ -1,6 +1,7 @@
 #include <cstdint>
 #include<iostream>
 #include <vector>
+#include <thread>
 #include <map>
 using namespace std;
 struct calc_data_1 //CD1
@@ -96,7 +97,8 @@ struct Producer
                 //match
                 atomic_set set = generate(calc_data,it_v2->second, it_v3->second);
                 //TODO handle in new theread to avoid blocking in case consumer handle is blocking
-                consumer_->handle(std::move(set));
+                auto t1 = new std::thread(&Consumer::handle,consumer_,std::move(set));
+                //consumer_->handle(std::move(set));
                 //assuming that seq number will not repeated , removing all previous sequence, when next match happen current sequence will be automatically deleted.
                 it2->second.erase(it2->second.begin(),++it_v2);
                 it3->second.erase(it3->second.begin(),++it_v3);
