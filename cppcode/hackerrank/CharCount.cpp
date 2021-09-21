@@ -33,7 +33,6 @@ long repeatedString(string s, long n) {
     {
         if(s[i] == 'a')
             ++rem;
-        
     }
         
     return (repeat_count*count) + rem;

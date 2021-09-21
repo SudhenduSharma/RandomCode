@@ -1,0 +1,1 @@
+//https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/discuss/1432873/C%2B%2B-Cleanest-O(n)-Solution-or-100-Runtime-or-Deques-or-Similar-to-%22Sliding-Window-Maximum%22
