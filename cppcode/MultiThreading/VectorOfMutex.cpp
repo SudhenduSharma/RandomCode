@@ -6,7 +6,7 @@
 #include <mutex>
 #include <vector>
 
-
+//Global Shared
 std::map<std::string, std::string> g_pages;
 std::mutex g_pages_mutex;
 
@@ -25,17 +25,17 @@ class A
         std::mutex aMutex;
 
 };
+
 class B
 {
     public :
         std::vector<A> listOfA; 
-
 };
 
 int main()
 {
     B obj;
-    B ob1 = obj;
+    //B ob1 = obj;  //Mutex are immovable so this line won't compile
     std::thread t1(save_page, "http://foo");
     std::thread t2(save_page, "http://bar");
     t1.join();
