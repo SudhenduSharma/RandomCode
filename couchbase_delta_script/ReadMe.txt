@@ -3,7 +3,14 @@ It is as DB upgrade script. Many languages such as go has automatic upgrade libr
 
 This is a test project to achieve similar behaviour for proprietary products. It is not a generic impelementation but good enough for my use case.
 
+The storekeepere applies the index and bucket creation db upgrade based on scripts such as those are present in bucket folder.
+The folder name refers to couchbase buckets.
+e.g. couchbase_delta_script/dw-couchbase/nosql/travel-sample/
+    create.1.nosql
+    create.2.nosql
 
+travel-sample --> Counchbase Buckets
+create.X.nosql --> contains the index creation/deletion operation
 
 
 # Bringing up Couchbase Locally
